@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kerem'in Kuru Temizleme Hizmetleri</title>
+    <title>Basit Kuru Temizleme Sayfa Taslağı</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -27,7 +27,7 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #000;
+            background-color: #0056b3;
         }
         nav a {
             color: white;
@@ -37,73 +37,82 @@
             transition: color 0.3s ease;
         }
         nav a:hover {
-            color: #4CAF50;
+            color: #ffeb3b;
         }
         .container {
             padding: 40px 20px;
             max-width: 1200px;
             margin: auto;
         }
-        .services, .contact, .about {
+        .section {
             margin: 40px 0;
         }
-        .services h2, .contact h2, .about h2 {
-            color: #4CAF50;
-            border-bottom: 2px solid #4CAF50;
+        .section h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
             display: inline-block;
             margin-bottom: 20px;
         }
-        .services p, .contact p, .about p {
+        .section p {
             line-height: 1.8;
         }
-        .service-image {
+        .section img {
             width: 100%;
-            max-width: 300px;
+            max-width: 600px;
             margin: 20px auto;
             display: block;
         }
         footer {
             text-align: center;
             padding: 20px 0;
-            background-color: #000;
+            background-color: #0056b3;
             color: white;
         }
     </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Kerem'in Kuru Temizleme Hizmetleri</h1>
+        <h1>Basit Kuru Temizleme Sayfa Taslağı</h1>
     </header>
     <nav>
-        <a href="#about">Hakkımızda</a>
-        <a href="#services">Hizmetlerimiz</a>
-        <a href="#contact">İletişim</a>
+        <a href="#about" onclick="showSection('about')">Hakkımızda</a>
+        <a href="#services" onclick="showSection('services')">Hizmetlerimiz</a>
+        <a href="#contact" onclick="showSection('contact')">İletişim</a>
     </nav>
     <div class="container">
-        <section id="about" class="about">
+        <section id="about" class="section">
             <h2>Hakkımızda</h2>
             <p>Kaliteli kuru temizleme hizmetleri sunan firmamız, müşteri memnuniyetini ön planda tutarak en iyi hizmeti vermeyi amaçlamaktadır. Profesyonel ekibimiz ve modern ekipmanlarımızla her türlü giysi ve tekstil ürününüzü özenle temizliyoruz.</p>
-            <img src="https://www.laundryheap.com/blog/wp-content/uploads/2018/10/dry-cleaner.jpg" alt="Hakkımızda" class="service-image">
+            <img src="https://www.laundryheap.com/blog/wp-content/uploads/2018/10/dry-cleaner.jpg" alt="Hakkımızda">
         </section>
-        <section id="services" class="services">
+        <section id="services" class="section" style="display:none;">
             <h2>Hizmetlerimiz</h2>
             <p>Giysi Temizleme: Günlük giysilerinizden özel gün elbiselerinize kadar her türlü giysiyi temizliyoruz.</p>
-            <img src="https://www.laundryheap.com/blog/wp-content/uploads/2018/10/dry-cleaner.jpg" alt="Giysi Temizleme" class="service-image">
+            <img src="https://www.laundryheap.com/blog/wp-content/uploads/2018/10/dry-cleaner.jpg" alt="Giysi Temizleme">
             <p>Yorgan ve Battaniye Temizleme: Büyük ve hacimli tekstil ürünlerinizi de özenle temizliyoruz.</p>
-            <img src="https://www.laundryheap.com/blog/wp-content/uploads/2018/10/dry-cleaner.jpg" alt="Yorgan ve Battaniye Temizleme" class="service-image">
+            <img src="https://www.laundryheap.com/blog/wp-content/uploads/2018/10/dry-cleaner.jpg" alt="Yorgan ve Battaniye Temizleme">
             <p>Perde ve Halı Temizleme: Ev ve ofislerinizin perdeleri ve halıları için profesyonel temizleme hizmeti sunuyoruz.</p>
-            <img src="https://www.laundryheap.com/blog/wp-content/uploads/2018/10/dry-cleaner.jpg" alt="Perde ve Halı Temizleme" class="service-image">
+            <img src="https://www.laundryheap.com/blog/wp-content/uploads/2018/10/dry-cleaner.jpg" alt="Perde ve Halı Temizleme">
         </section>
-        <section id="contact" class="contact">
+        <section id="contact" class="section" style="display:none;">
             <h2>İletişim</h2>
             <p>Adres: Örnek Mahallesi, Örnek Sokak, No: 123, İstanbul</p>
             <p>Telefon: (0212) 123 45 67</p>
             <p>E-posta: info@kurutemizleme.com</p>
-            <img src="https://www.laundryheap.com/blog/wp-content/uploads/2018/10/dry-cleaner.jpg" alt="İletişim" class="service-image">
+            <img src="https://www.laundryheap.com/blog/wp-content/uploads/2018/10/dry-cleaner.jpg" alt="İletişim">
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Kerem'in Kuru Temizleme Hizmetleri. Tüm hakları saklıdır.</p>
+        <p>&copy; 2024 Basit Kuru Temizleme Sayfa Taslağı. Tüm hakları saklıdır.</p>
     </footer>
 </body>
 </html>
