@@ -1,0 +1,2 @@
+# orneksayfa
+Örnek olarak oluşturulmuştur.
